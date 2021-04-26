@@ -2,9 +2,47 @@
 <html>
 	<head>
 	<meta charset="UTF-8">
-<title>Insert title here</title>
+	<title>Insert title here</title>
 </head>
 <body>
-	<h1>hello</h1>
+	
+	<table id="table"></table>
+	
+	<script>
+	
+	table.style.borderCollapse = 'collapse';
+	
+	var caption = document.createElement('caption');
+	caption.textContent = '다이얼';
+	document.getElementById('table').appendChild(caption);
+	
+	caption.style.color = 'red';
+	
+	var tr = document.createElement('tr');
+	table.appendChild(tr);
+	
+	for(var i=0; i<=6; i += 3) {
+		for(var j=1; j<4; j++) {
+			var td = document.createElement('td');
+			td.textContent = j + i;
+			tr.appendChild(td);
+		}
+		document.createElement('tr');
+	}
+	td.style.width = '50px';
+	td.style.height = '50px';
+	td.style.border = '1px solid black';
+	td.style.textAlign = 'center';
+	
+	var td = document.createElement('td');
+	td.textContent = '*';
+	var td = document.createElement('td');
+	td.textContent = '0';
+	var td = document.createElement('td');
+	td.textContent = '#';
+	tr.appendChild(td);
+	table.appendChild(tr);
+	
+	</script>
 </body>
 </html>
